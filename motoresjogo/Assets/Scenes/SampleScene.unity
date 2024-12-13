@@ -1417,6 +1417,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1498,6 +1499,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d687537154440a3913a9a3c7977978c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraTarget: {fileID: 509754393}
+  FollowDistance: 30
+  MaxFollowDistance: 100
+  MinFollowDistance: 2
+  ElevationAngle: 30
+  MaxElevationAngle: 85
+  MinElevationAngle: 0
+  OrbitalAngle: 0
+  CameraMode: 0
+  MovementSmoothing: 1
+  RotationSmoothing: 0
+  MovementSmoothingValue: 25
+  RotationSmoothingValue: 5
+  MoveSensitivity: 2
 --- !u!1 &741959785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1813,8 +1840,8 @@ Transform:
   m_GameObject: {fileID: 1034027894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -0.05, z: 0}
-  m_LocalScale: {x: 25.316532, y: 12.803796, z: 9.928053}
+  m_LocalPosition: {x: 0.1199, y: 0.0162, z: 0}
+  m_LocalScale: {x: 27.01384, y: 14.819128, z: 9.928053}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1831,7 +1858,6 @@ GameObject:
   - component: {fileID: 1233975478}
   - component: {fileID: 1233975477}
   - component: {fileID: 1233975479}
-  - component: {fileID: 1233975480}
   - component: {fileID: 1233975482}
   m_Layer: 8
   m_Name: Ground
@@ -1849,8 +1875,8 @@ Transform:
   m_GameObject: {fileID: 1233975475}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.2275, z: 0}
+  m_LocalScale: {x: 1, y: 1.0569, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1760167209}
@@ -2326,26 +2352,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!249 &1233975480
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233975475}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 15
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
 --- !u!50 &1233975482
 Rigidbody2D:
   serializedVersion: 4
@@ -2372,7 +2378,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &1342878888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,8 +2559,8 @@ GameObject:
   - component: {fileID: 1439365382}
   - component: {fileID: 1439365381}
   - component: {fileID: 1439365380}
-  - component: {fileID: 1439365379}
   - component: {fileID: 1439365378}
+  - component: {fileID: 1439365383}
   m_Layer: 8
   m_Name: Plataformas
   m_TagString: Untagged
@@ -2571,7 +2577,7 @@ Transform:
   m_GameObject: {fileID: 1439365376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2603,27 +2609,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!249 &1439365379
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439365376}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 15
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Constraints: 7
 --- !u!19719996 &1439365380
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2654,7 +2640,7 @@ TilemapCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
@@ -2700,7 +2686,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 6
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2905,6 +2891,25 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!251 &1439365383
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439365376}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1506470730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,8 +3826,8 @@ Transform:
   m_GameObject: {fileID: 1952378628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0293, y: -0.0261, z: 0}
+  m_LocalScale: {x: 0.98409736, y: 0.9826078, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1760167209}

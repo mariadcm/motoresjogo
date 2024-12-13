@@ -31,9 +31,9 @@ public class Gamecontroller : MonoBehaviour
 
 
 
- public void RestartGame(string lvlName)
+ public void RestartGame(string SampleScenes)
  {
-     SceneManager.LoadScene(lvlName);
+     SceneManager.LoadScene(SampleScenes);
  }
 }
     
